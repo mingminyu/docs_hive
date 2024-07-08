@@ -126,6 +126,4 @@ nav:
       - 条件函数: functions/built-in-functions/conditional-functions.md
       - 字符串函数: functions/built-in-functions/string-functions.md
     - 聚合函数: functions/built-in-functions/aggregate-functions.md
-
-
   
