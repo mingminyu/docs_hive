@@ -133,40 +133,38 @@ SELECT COALESCE(NULL, NULL, 5, NULL);  -- 5
 最常用的就是使用 `CASE WHEN` 来处理一列或者多列字段值:
 
 ???+ example "CASE WHEN 示例"
-
     === "处理单列"
+        ```sql
+        SELECT 
+          CASE 
+            WHEN c3 IS NULL THEN "a"
+            WHEN c3 BETWEEN 2 AND 4 THEN "b"
+            WHEN c3 >= 5 THEN "c"
+          ELSE "d" END AS cate
+        FROM example;
 
-      ```sql
-      SELECT 
-        CASE 
-          WHEN c3 IS NULL THEN "a"
-          WHEN c3 BETWEEN 2 AND 4 THEN "b"
-          WHEN c3 >= 5 THEN "c"
-        ELSE "d" END AS cate
-      FROM example;
-
-      -- 输出结果
-      --  a
-      --  b
-      --  c
-      ```
-
+        -- 输出结果
+        --  a
+        --  b
+        --  c
+        ```
+    
     === "处理多列"
 
-      ```sql
-      SELECT 
-        CASE 
-          WHEN c3 IS NULL AND c4 IS NULL THEN "a"
-          WHEN c3 BETWEEN 2 AND 4 AND c4 != 3 THEN "b"
-          WHEN c3 >= 5 AND c4 IS NOT NULL THEN "c"
-        ELSE "d" END AS cate
-      FROM example;
+        ```sql
+        SELECT 
+          CASE 
+            WHEN c3 IS NULL AND c4 IS NULL THEN "a"
+            WHEN c3 BETWEEN 2 AND 4 AND c4 != 3 THEN "b"
+            WHEN c3 >= 5 AND c4 IS NOT NULL THEN "c"
+          ELSE "d" END AS cate
+        FROM example;
 
-      -- 输出结果
-      --  a
-      --  d
-      --  c
-      ```
+        -- 输出结果
+        --  a
+        --  d
+        --  c
+        ```
 
 ### 7.2 CASE a WHEN
 
