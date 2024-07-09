@@ -59,7 +59,6 @@ SELECT NVL(NULL, NULL);  -- NULL
         SELECT NVL(c1, c2) FROM example;
         ```
 
-
     === "输出结果"
     
         ```sql 
