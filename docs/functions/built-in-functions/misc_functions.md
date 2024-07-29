@@ -23,7 +23,6 @@ SELECT sha2('ABC', 384);
 SELECT sha2('ABC', 512);
 ```
 
-
 ## 5. AES_ENCRYPT
 
 
