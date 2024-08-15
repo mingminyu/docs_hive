@@ -75,6 +75,7 @@ SELECT NVL(NULL, NULL);  -- NULL
 
         ```python title="fillna缺失值填充"
         df["col1"].fillna(df["col2"])
+        ```
     
     === "变种 IF 和 IFNULL"
 
@@ -134,6 +135,7 @@ SELECT COALESCE(NULL, NULL, 5, NULL);  -- 5
 
 ???+ example "CASE WHEN 示例"
     === "处理单列"
+        
         ```sql
         SELECT 
           CASE 
